@@ -1,0 +1,349 @@
+@import "variables";
+
+// GRID VARIABLES & MIXINS
+//------------------------------------
+// http://gridcalculator.dk - grid calculator
+
+// Change this values to change the size of the grid
+//1180px grid width 
+@column-width: 107;
+@gutter-width: 15;
+@columns: 12;
+
+// Utility variable — you should never need to modify this
+@gridsystem-width: (@column-width * @columns) + (@gutter-width * @columns) * 1px;
+
+// Set @total-width to 100% for a fluid layout
+//@total-width: @gridsystem-width;
+@total-width: 100%; // makes  .column mixin turn into percentages 
+
+.column(@x,@columns:@columns) {
+	display: inline;
+	float: left;
+	width: @total-width*((((@gutter-width+@column-width)*@x)-@gutter-width) / @gridsystem-width);
+	margin: 0 @total-width*((@gutter-width*.5)/@gridsystem-width);
+}
+
+
+// GLOBAL STYLES
+//----------------------------------------------------------
+
+// Fixes Box Model sizing issues
+// http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+html {
+  box-sizing: border-box;
+  background-color: @Blue;
+
+  
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+img {
+	width: 100%;
+}
+
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.container {
+	max-width: @gridsystem-width;
+	margin: 0 auto;
+	overflow: hidden;
+	font-family: @BodyFont;
+	line-height: 20px;
+	color: @BodyColor;
+	font-size: 11pt;
+}
+
+
+header {
+	.column(2);
+	height: 1px;
+		img {
+			.column(11);
+			padding: 30px 0px 15px 0px;
+
+		}
+}
+
+ul {
+		list-style-type: none;
+		padding: 0;
+}
+
+nav {
+	position: fixed;
+	font-family: @NavFont;
+	font-size: 9pt;
+	color: @DarkBlue;
+		li{
+			letter-spacing: 1.5px;
+			padding: 5px 0px 0px 26px;
+		}
+	
+
+	a:link {
+	    text-decoration: none;
+	}
+
+	a:visited {
+	    color:@DarkBlue;
+	}
+
+	a:hover{
+	    
+		color: #4896b0;
+	}
+
+	a:active li{
+	    
+	    background-color:  @hover;
+	}
+}
+section {
+	.column(10);
+
+}
+article {
+	border-bottom: 1px solid;
+	border-color: #c9c9c9; 
+	padding-bottom: 65px;
+}
+
+h3 {
+	font-family: @NavFont;
+	font-size: 13pt;
+	padding: 60px 0px 20px 0px;
+	color: @DarkBlue;
+
+	
+}
+
+.gallery {
+	overflow: hidden;
+	ul {
+		padding: 0;
+		li{
+			.column(3);
+			padding-bottom: 12px;
+			img {
+				border: 12px solid;
+				border-color: #fff; 
+				transition: opacity 0.3s ease-in-out;
+				&:hover{
+					opacity: 0;
+				}
+			}
+		}
+
+		li:hover {
+		    background: url(../img/hover.jpg)  no-repeat;
+		    .column(3);
+		}
+	}
+}
+
+.thinking {
+	.left-float {
+		.column(6);
+			span {
+				font-size: 28px;
+				line-height: 30px;
+			}
+			div {
+				font-size: 24px;
+				line-height: 30px;
+				text-align: right;
+				padding-right:50px;
+				font-style: italic;
+				}
+		}
+	
+	.right-float {
+		.column(6);
+		}
+	
+}
+	
+.blog {
+	overflow: hidden;
+		div {
+			.column(3);
+			padding-bottom: 12px;
+			height: 450px;
+			background-color: #fff;	
+
+			img {
+				-webkit-filter: grayscale(1);
+  				filter: grayscale(1);
+				&:hover{
+					-webkit-filter: grayscale(0);
+  					filter: grayscale(0);
+				}
+			}
+			
+			h3, p {
+				padding:0px;
+				padding-left: 25px;
+				font-size:15pt;
+
+			}
+				
+			
+		.read {
+			.column(12);
+			padding-left: 25px;
+			padding-top: 1px;
+			border-top: 1px solid;
+			border-color: #c9c9c9; 
+			font-style: italic;
+			color: @DarkBlue;
+		}
+	}
+}
+
+.experience {
+	padding: 0px 15px 65px 15px;
+	.navi {
+		.column(10);
+		li{
+			display: inline;
+			font-style: italic;
+		}
+		a:link {
+	    text-decoration: none;
+		}
+
+		a:visited {
+		    color:@DarkBlue;
+		}
+
+		a:hover {
+		    
+			text-decoration: underline;
+		}
+		
+	}
+
+	ul {
+		.column(3);
+		float: left;
+		
+	}
+	h2 {
+		font-family: @NavFont;
+		color: @DarkBlue;
+		font-size: 12pt;
+		margin-bottom: 0px;
+	}
+}
+
+
+
+.contact {
+	div{
+		padding: 0px 15px 15px 15px;
+	}
+	h2 {
+	font-size: 13pt;
+	}
+		
+}
+
+footer {
+	.column(12);
+	padding: 10px 0px 30px 0px;
+
+		.left-float {
+			float: left;
+		}
+		.right-float {
+			float: right;
+		}
+}
+
+.social-media  {
+	position: fixed;
+	bottom:0px;
+	padding-bottom: 30px;
+	p {
+		font-style: italic;
+		a:link {
+	    text-decoration: underline;
+		}
+		a:visited {
+		    color:@BodyColor;
+		}
+		a:hover {
+			color: @DarkBlue;
+		}
+	}
+
+	i {
+		font-size: 30px;
+		color: @DarkBlue;
+
+	}
+	
+}
+
+//THINKING------------------------
+
+
+.headings{
+	.column(12);
+	padding-bottom: 80px;
+		span {
+			font-size: 20px;
+			line-height: 30px;
+
+
+		}
+}
+
+
+.lebron {
+	.column(12);
+	background: #fff;
+	img {
+		padding: 40px;
+	}
+}
+
+//BLOG------------------------
+
+iframe {
+	height: 400px;
+	.column(12);
+	padding-left: 180px;
+	padding-right: 180px;
+	padding-top: 40px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
