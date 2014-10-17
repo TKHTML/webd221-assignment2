@@ -1,0 +1,805 @@
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+img {
+  width: 100%;
+}
+.container {
+  max-width: 1680px;
+  margin: 0 auto;
+}
+header {
+  margin-top: 30px;
+}
+header #logo {
+  display: inline;
+  float: left;
+  width: 48.214285714285715%;
+  margin: 0 0.8928571428571428%;
+}
+header #logo .logo {
+  width: 170px;
+  height: 80px;
+}
+header nav {
+  display: inline;
+  float: left;
+  width: 48.214285714285715%;
+  margin: 0 0.8928571428571428%;
+  font-family: 'calibriregular';
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 16px;
+}
+header nav li {
+  display: inline;
+  margin-right: 55px;
+}
+header nav li:last-child {
+  margin-right: 0;
+}
+header nav a {
+  text-decoration: none;
+  padding: 10px 0 10px 0;
+  color: #666;
+}
+header nav a:hover {
+  color: #ff3333;
+}
+h2 {
+  font-family: 'corbenregular';
+  color: #555;
+  font-size: 30px;
+  line-height: 38px;
+}
+h3 {
+  font-family: 'calibriregular';
+  color: #666;
+  font-size: 22px;
+  line-height: 28px;
+}
+h3 a {
+  color: #ff3333;
+  text-decoration: none;
+}
+h3 a:hover {
+  text-decoration: underline;
+}
+#intro {
+  margin-top: 60px;
+}
+#intro .start a:hover {
+  text-decoration: underline;
+}
+#intro h2 {
+  display: inline;
+  float: left;
+  width: 48.214285714285715%;
+  margin: 0 0.8928571428571428%;
+}
+#intro h3 {
+  display: inline;
+  float: left;
+  width: 48.214285714285715%;
+  margin: 0 0.8928571428571428%;
+}
+#intro a {
+  text-decoration: none;
+}
+#intro .hero {
+  display: inline;
+  float: left;
+  width: 98.21428571428571%;
+  margin: 0 0.8928571428571428%;
+  margin-top: 70px;
+}
+#intro .hero p {
+  margin-top: 15px;
+}
+.serif {
+  font-family: 'corbenregular';
+  color: #555;
+  font-size: 22px;
+}
+.sans {
+  font-family: 'calibriregular';
+  color: #666;
+  font-size: 18px;
+}
+.sans:hover {
+  color: #ff3333;
+}
+.carList li {
+  display: inline;
+  float: left;
+  width: 31.547619047619047%;
+  margin: 0 0.8928571428571428%;
+  margin-top: 60px;
+}
+.carList p {
+  margin-top: 15px;
+}
+.carList .slide:hover {
+  opacity: .4;
+  -webkit-transition: opacity 400ms;
+  transition: opacity 400ms;
+  -moz-transition: opacity 400ms;
+}
+.toTop {
+  width: 30px;
+  float: right;
+  margin: 40px 30px 110px 0;
+}
+.line {
+  border-bottom: 1px solid;
+  width: 40px;
+  margin: 20px 0 20px 0;
+}
+#about .rightFloat {
+  display: inline;
+  float: left;
+  width: 48.214285714285715%;
+  margin: 0 0.8928571428571428%;
+  float: right;
+  margin-top: 60px;
+}
+#about .mainList .links {
+  display: inline;
+  float: left;
+  width: 48.214285714285715%;
+  margin: 0 0.8928571428571428%;
+}
+#about .mainList .links li {
+  display: inline-block;
+  margin-right: 45px;
+  margin-top: 50px;
+}
+#about .mainList .links li:last-child {
+  margin-right: 0;
+}
+#about .mainList .links a {
+  text-decoration: none;
+}
+#about .mainList .line {
+  margin: 16px 0 10px 0;
+  width: 20px;
+}
+#about .mainList img {
+  display: inline;
+  float: left;
+  width: 98.21428571428571%;
+  margin: 0 0.8928571428571428%;
+  margin-top: 50px;
+}
+#about .mainList .leftFloat {
+  display: inline;
+  width: 48.214285714285715%;
+  margin: 0 0.8928571428571428%;
+  float: left;
+  clear: both;
+  margin-top: 60px;
+}
+#about .mainList .leftFloat p:first-of-type {
+  font-style: italic;
+}
+h4 {
+  font-family: 'calibriregular';
+  color: #666;
+  font-size: 19px;
+  color: #ff3333;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.sig {
+  font-family: 'calibriregular';
+  color: #666;
+  font-size: 18px;
+  color: #ff3333;
+  margin-top: 25px;
+}
+.sig2 {
+  font-family: 'calibriregular';
+  color: #666;
+  font-size: 16px;
+  margin-top: 4px;
+}
+.something {
+  margin-top: 60px;
+}
+.something .stock {
+  display: inline;
+  float: left;
+  width: 48.214285714285715%;
+  margin: 0 0.8928571428571428%;
+}
+.something .desc {
+  display: inline;
+  float: left;
+  width: 48.214285714285715%;
+  margin: 0 0.8928571428571428%;
+}
+.something .desc .line {
+  margin: 16px 0 10px 0;
+  width: 20px;
+}
+.something h4:last-child {
+  margin-top: 20px;
+}
+.something a {
+  text-decoration: none;
+}
+#fifth {
+  margin-top: 60px;
+}
+#fifth .pest {
+  display: inline;
+  float: left;
+  width: 98.21428571428571%;
+  margin: 0 0.8928571428571428%;
+}
+#fifth h3 {
+  display: inline;
+  float: left;
+  width: 6.547619047619048%;
+  margin: 0 0.8928571428571428%;
+}
+#fifth ul {
+  display: inline;
+  float: left;
+  width: 39.88095238095239%;
+  margin: 0 0.8928571428571428%;
+}
+#fifth ul li {
+  margin-bottom: 5px;
+}
+#fifth ul:last-child {
+  padding-bottom: 30px;
+}
+#fifth ul a {
+  text-decoration: none;
+}
+h5 {
+  font-family: 'calibriregular';
+  color: #666;
+  font-size: 19px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+#dealer .begin {
+  display: inline;
+  float: left;
+  width: 48.214285714285715%;
+  margin: 0 0.8928571428571428%;
+  margin-top: 60px;
+  float: right;
+}
+#dealer .hero2 {
+  display: inline;
+  float: left;
+  width: 98.21428571428571%;
+  margin: 0 0.8928571428571428%;
+  margin-top: 60px;
+}
+#dealer .endInfo {
+  display: inline;
+  float: left;
+  width: 48.214285714285715%;
+  margin: 0 0.8928571428571428%;
+  margin-top: 60px;
+  float: right;
+  font-family: 'calibriregular';
+  color: #666;
+  font-size: 22px;
+  line-height: 24px;
+}
+#dealer .endInfo p {
+  margin-bottom: 20px;
+}
+#dealer .endInfo p a {
+  text-decoration: none;
+  color: #ff3333;
+}
+#dealer .endInfo p a:hover {
+  text-decoration: underline;
+}
+#dealer .endInfo p:last-of-type {
+  margin-bottom: 0;
+}
+#dealer .endInfo ul {
+  margin-bottom: 20px;
+  list-style-type: disc;
+  list-style-position: inside;
+}
+footer {
+  background-color: #fcbb01;
+  height: 100%;
+  clear: both;
+}
+footer p {
+  font-family: 'calibriregular';
+  color: #666;
+  font-size: 16px;
+  margin-bottom: 7px;
+}
+footer a {
+  font-family: 'corbenregular';
+  color: #555;
+  font-size: 20px;
+  text-decoration: none;
+}
+footer a:hover {
+  color: #ff3333;
+}
+footer .bottominfo {
+  padding-top: 50px;
+}
+footer .left {
+  display: inline;
+  float: left;
+  width: 14.880952380952381%;
+  margin: 0 0.8928571428571428%;
+}
+footer .middle {
+  display: inline;
+  float: left;
+  width: 48.214285714285715%;
+  margin: 0 0.8928571428571428%;
+}
+footer .right {
+  display: inline;
+  float: left;
+  width: 31.547619047619047%;
+  margin: 0 0.8928571428571428%;
+  padding-top: 15px;
+  margin-bottom: 45px;
+}
+footer .right li {
+  width: 35px;
+  display: inline-block;
+  float: right;
+  margin-left: 9px;
+}
+/* Media Query for Tablet Begins */
+@media screen and (min-width: 480px) and (max-width: 900px) {
+  header {
+    margin: 0 15px 0 15px;
+  }
+  header #logo {
+    display: inline;
+    float: left;
+    width: 98.21428571428571%;
+    margin: 0 0.8928571428571428%;
+  }
+  header nav {
+    display: inline;
+    float: left;
+    width: 98.21428571428571%;
+    margin: 0 0.8928571428571428%;
+    margin-top: 30px;
+  }
+  header nav li {
+    margin-right: 45px;
+  }
+  h2 {
+    font-size: 26px;
+    line-height: 32px;
+  }
+  h3 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .sans {
+    font-size: 16px;
+  }
+  .serif {
+    font-size: 20px;
+  }
+  section {
+    margin: 0 15px 0 15px;
+  }
+  #intro {
+    margin-top: 60px;
+  }
+  #intro h2 {
+    display: inline;
+    float: left;
+    width: 98.21428571428571%;
+    margin: 0 0.8928571428571428%;
+    margin-bottom: 20px;
+  }
+  #intro h3 {
+    display: inline;
+    float: left;
+    width: 98.21428571428571%;
+    margin: 0 0.8928571428571428%;
+    margin-bottom: 20px;
+  }
+  #intro .hero {
+    display: inline;
+    float: left;
+    width: 98.21428571428571%;
+    margin: 0 0.8928571428571428%;
+  }
+  #intro .serif {
+    margin-bottom: 30px;
+    font-size: 20px;
+  }
+  #intro .carList li {
+    display: inline;
+    float: left;
+    width: 48.214285714285715%;
+    margin: 0 0.8928571428571428%;
+  }
+  .toTop {
+    margin-bottom: 60px;
+  }
+  h5 {
+    font-size: 18px;
+  }
+  h4 {
+    font-size: 18px;
+  }
+  #about .rightFloat {
+    display: inline;
+    float: left;
+    width: 98.21428571428571%;
+    margin: 0 0.8928571428571428%;
+    margin-top: 40px;
+  }
+  #about .mainList .links {
+    display: inline;
+    float: left;
+    width: 98.21428571428571%;
+    margin: 0 0.8928571428571428%;
+  }
+  #about .mainList .links li {
+    margin-top: 40px;
+  }
+  #about .mainList img {
+    display: inline;
+    float: left;
+    width: 98.21428571428571%;
+    margin: 0 0.8928571428571428%;
+    margin-top: 30px;
+  }
+  #about .mainList .leftFloat {
+    display: inline;
+    float: left;
+    width: 98.21428571428571%;
+    margin: 0 0.8928571428571428%;
+    margin-top: 40px;
+  }
+  #about .something {
+    margin-top: 40px;
+  }
+  #about .something .stock {
+    display: inline;
+    float: left;
+    width: 98.21428571428571%;
+    margin: 0 0.8928571428571428%;
+    margin: 20px 0 40px 0;
+  }
+  #about .something .stock:nth-child(2) {
+    margin-bottom: 0;
+  }
+  #about .something .desc {
+    display: inline;
+    float: left;
+    width: 98.21428571428571%;
+    margin: 0 0.8928571428571428%;
+  }
+  #about #fifth {
+    margin-top: 40px;
+  }
+  #about #fifth .pest {
+    display: inline;
+    float: left;
+    width: 98.21428571428571%;
+    margin: 0 0.8928571428571428%;
+  }
+  #about #fifth h3 {
+    display: inline;
+    float: left;
+    width: 14.880952380952381%;
+    margin: 0 0.8928571428571428%;
+  }
+  #about #fifth ul {
+    display: inline;
+    float: left;
+    width: 81.54761904761905%;
+    margin: 0 0.8928571428571428%;
+  }
+  #dealer .begin {
+    display: inline;
+    float: left;
+    width: 98.21428571428571%;
+    margin: 0 0.8928571428571428%;
+    margin-top: 40px;
+    float: right;
+  }
+  #dealer .hero2 {
+    display: inline;
+    float: left;
+    width: 98.21428571428571%;
+    margin: 0 0.8928571428571428%;
+    margin-top: 40px;
+    margin-bottom: 15px;
+  }
+  #dealer .endInfo {
+    display: inline;
+    float: left;
+    width: 98.21428571428571%;
+    margin: 0 0.8928571428571428%;
+    margin-top: 60px;
+    float: none;
+    font-size: 20px;
+    line-height: 20px;
+  }
+  #dealer .endInfo p {
+    margin-bottom: 10px;
+  }
+  footer p {
+    font-size: 16px;
+  }
+  footer a {
+    font-size: 20px;
+  }
+  footer .bottominfo {
+    padding-top: 30px;
+    margin: 0 15px 0 15px;
+  }
+  footer .left {
+    display: inline;
+    float: left;
+    width: 48.214285714285715%;
+    margin: 0 0.8928571428571428%;
+  }
+  footer .middle {
+    display: inline;
+    float: left;
+    width: 48.214285714285715%;
+    margin: 0 0.8928571428571428%;
+  }
+  footer .right {
+    display: inline;
+    float: left;
+    width: 98.21428571428571%;
+    margin: 0 0.8928571428571428%;
+    padding-top: 15px;
+    padding-right: 30px;
+    margin-bottom: 45px;
+  }
+  footer .right li {
+    width: 35px;
+    display: inline-block;
+    margin: 10px 0 0 9px;
+  }
+}
+/* Media Query for Tablet Ends */
+/* Media Query for Mobile Begins */
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  header {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  header #logo {
+    display: inline;
+    float: left;
+    width: 98.21428571428571%;
+    margin: 0 0.8928571428571428%;
+  }
+  header #logo img {
+    transform: scale(0.7);
+  }
+  header nav {
+    display: inline;
+    float: left;
+    width: 98.21428571428571%;
+    margin: 0 0.8928571428571428%;
+    margin-top: 30px;
+    font-size: 18px;
+  }
+  header nav li {
+    margin-right: 15px;
+  }
+  section {
+    margin: 0 8px 0 8px;
+  }
+  h2 {
+    font-size: 22px;
+    line-height: 28px;
+  }
+  h3 {
+    font-size: 18px;
+    line-height: 18px;
+  }
+  .sans {
+    font-size: 14px;
+  }
+  .serif {
+    font-size: 18px;
+  }
+  #intro {
+    margin-top: 60px;
+  }
+  #intro h2 {
+    display: inline;
+    float: left;
+    width: 98.21428571428571%;
+    margin: 0 0.8928571428571428%;
+    margin-bottom: 20px;
+  }
+  #intro h3 {
+    display: inline;
+    float: left;
+    width: 98.21428571428571%;
+    margin: 0 0.8928571428571428%;
+    margin-bottom: 20px;
+  }
+  #intro .hero {
+    display: inline;
+    float: left;
+    width: 98.21428571428571%;
+    margin: 0 0.8928571428571428%;
+  }
+  #intro .serif {
+    margin-bottom: 30px;
+  }
+  .carList li {
+    display: inline;
+    float: left;
+    width: 98.21428571428571%;
+    margin: 0 0.8928571428571428%;
+  }
+  .toTop {
+    margin-bottom: 60px;
+  }
+  h5 {
+    font-size: 16px;
+  }
+  h4 {
+    font-size: 16px;
+  }
+  #about .rightFloat {
+    display: inline;
+    float: left;
+    width: 98.21428571428571%;
+    margin: 0 0.8928571428571428%;
+    margin-top: 40px;
+  }
+  #about .mainList .links {
+    display: inline;
+    float: left;
+    width: 98.21428571428571%;
+    margin: 0 0.8928571428571428%;
+  }
+  #about .mainList .links li {
+    margin-top: 40px;
+    margin-right: 25px;
+  }
+  #about .mainList img {
+    display: inline;
+    float: left;
+    width: 98.21428571428571%;
+    margin: 0 0.8928571428571428%;
+    margin-top: 20px;
+  }
+  #about .mainList .leftFloat {
+    display: inline;
+    float: left;
+    width: 98.21428571428571%;
+    margin: 0 0.8928571428571428%;
+    margin-top: 20px;
+  }
+  #about .something {
+    margin-top: 40px;
+  }
+  #about .something .stock {
+    display: inline;
+    float: left;
+    width: 98.21428571428571%;
+    margin: 0 0.8928571428571428%;
+    margin: 20px 0 40px 0;
+  }
+  #about .something .stock:nth-child(2) {
+    margin-bottom: -40px;
+  }
+  #about .something .desc {
+    display: inline;
+    float: left;
+    width: 98.21428571428571%;
+    margin: 0 0.8928571428571428%;
+  }
+  #about #fifth {
+    margin-top: 40px;
+  }
+  #about #fifth .pest {
+    display: inline;
+    float: left;
+    width: 98.21428571428571%;
+    margin: 0 0.8928571428571428%;
+  }
+  #about #fifth h3 {
+    display: inline;
+    float: left;
+    width: 14.880952380952381%;
+    margin: 0 0.8928571428571428%;
+  }
+  #about #fifth ul {
+    display: inline;
+    float: left;
+    width: 81.54761904761905%;
+    margin: 0 0.8928571428571428%;
+  }
+  #dealer .begin {
+    display: inline;
+    float: left;
+    width: 98.21428571428571%;
+    margin: 0 0.8928571428571428%;
+    margin-top: 40px;
+    float: right;
+  }
+  #dealer .hero2 {
+    display: inline;
+    float: left;
+    width: 98.21428571428571%;
+    margin: 0 0.8928571428571428%;
+    margin-top: 40px;
+    margin-bottom: 15px;
+  }
+  #dealer .endInfo {
+    display: inline;
+    float: left;
+    width: 98.21428571428571%;
+    margin: 0 0.8928571428571428%;
+    margin-top: 60px;
+    float: none;
+    font-size: 18px;
+    line-height: 20px;
+  }
+  #dealer .endInfo p {
+    margin-bottom: 10px;
+  }
+  footer p {
+    font-size: 14px;
+  }
+  footer a {
+    font-size: 18px;
+  }
+  footer .bottominfo {
+    padding-top: 30px;
+    margin: 0 8px 0 8px;
+  }
+  footer .left {
+    display: inline;
+    float: left;
+    width: 48.214285714285715%;
+    margin: 0 0.8928571428571428%;
+  }
+  footer .middle {
+    display: inline;
+    float: left;
+    width: 48.214285714285715%;
+    margin: 0 0.8928571428571428%;
+  }
+  footer .right {
+    display: inline;
+    float: left;
+    width: 98.21428571428571%;
+    margin: 0 0.8928571428571428%;
+    padding-top: 10px;
+    margin-bottom: 25px;
+  }
+  footer .right li {
+    margin: 10px 0 0 9px;
+  }
+}
