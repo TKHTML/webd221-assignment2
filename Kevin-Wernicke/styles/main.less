@@ -1,0 +1,201 @@
+@import "variables.less";
+@import "mixins.less";
+
+// GLOBAL STYLES
+//----------------------------------------------------------
+
+// Fixes Box Model sizing issues
+html {
+  box-sizing: border-box;
+}
+
+// Fixes padding and margin
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+//Use this to force clear floated child elements
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+img {
+	width: 100%;
+}
+
+//SHARED STYLES
+//-------------------------------------
+
+.container {
+	max-width: @gridsystem-width;
+	margin: 0 auto;
+	// z-index: 1;
+	// position: relative;
+	// margin-bottom: 160px; 
+	// background: #f9f9f9;
+}
+
+body {
+	background: @bodyColor;
+}
+
+h1, h2, h3, h4 {
+	font-weight: normal;
+}
+
+h1 {
+	color: @hoverColor;
+}
+
+h3 {
+	margin: 0;
+	padding: 0;
+	font-size: 14px;
+	font-family: @main-font;
+	color: @h3FontColor;
+}
+
+li {
+	list-style-type: none;
+	display: inline-block;
+}
+
+a {
+	text-decoration: none;
+	font-size: 15px;
+	color: #000;
+	font-family: @main-font;
+	color: @mainFontColor;
+
+	&:hover {
+		color: @hoverColor;
+		transition: color .25s ease-in-out, border-color .25s ease-in-out;
+	}
+}
+
+p {
+	margin: 0;
+	padding: 0;
+	font-family: @secondary-font;
+	color: @mainFontColor;
+}
+
+
+//HEADER 
+//-------------------------------------
+
+header {
+	height: 120px;
+	padding-top: 20px;
+}
+
+.logo {
+	.column(6);
+	padding: 15px;
+}
+
+nav {
+	.column(6);
+	padding-top: 25px;
+	
+	li {
+		margin-right: 60px;
+	}
+}
+
+// SUB NAV
+//-------------------------------------
+
+.sub-nav {
+	.column(12);
+	
+	ul {
+		padding: 15px;
+	}
+
+	li {
+		margin-right: 32px;
+	}	
+}
+
+
+//MAIN INFO
+//--------------------------------------
+
+.project-container {
+	.column(6);
+	padding: 15px;
+	margin-bottom: 45px;
+
+	h3 {
+		padding-top: 12px;
+		padding-bottom: 11px;
+		font-weight: normal;
+	}
+
+	p {
+		font-size: 22px;
+	}
+}
+
+//FOOTER
+//---------------------------------------
+
+footer{
+	// position: fixed;
+	// bottom: 0;
+	// left: 0;
+	width: 100%;
+	background: @footerColor;
+	padding-top: 60px;
+	height: 160px;
+
+	a {
+		font-family: @secondary-font;
+		font-size: 18px;
+	}
+
+	p {
+		font-family: @main-font;
+		font-size: 14px;
+	}
+}
+
+.email {
+	.column(4);
+	padding-left: 20px;
+}
+
+.email,
+.visit {
+	p {
+		padding-bottom: 5px; 
+	}
+}
+
+.visit {
+	.column(6);
+}
+
+.social-media {
+	.column(2);
+
+	i {
+		color: rgba(255,255,255,0.7);
+		margin-right: 20px; 
+
+		&:hover {
+			color: rgba(255, 255, 255, 1);
+			transition: color .25s ease-in-out;
+		}
+	}
+}
+
+
+
+
+
+
+
