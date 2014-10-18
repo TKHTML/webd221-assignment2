@@ -1,0 +1,207 @@
+// GRID VARIABLES & MIXINS
+//------------------------------------
+// http://gridcalculator.dk - grid calculator
+
+@column-width: 72;
+@gutter-width: 16;
+@columns: 12;
+
+// Utility variable — you should never need to modify this
+@gridsystem-width: (@column-width * @columns) + (@gutter-width * @columns) * 1px;
+
+// Set @total-width to 100% for a fluid layout
+// @total-width: @gridsystem-width;
+@total-width: 100%; //makes .column mixins percentages instead of number values
+
+.column(@x,@columns:@columns) {
+	display: inline;
+	float: left;
+	width: @total-width*((((@gutter-width+@column-width)*@x)-@gutter-width) / @gridsystem-width);
+	margin: 0 @total-width*((@gutter-width*.5)/@gridsystem-width);
+}
+
+.push(@offset:1) {
+	margin-left: @total-width*(((@gutter-width+@column-width)*@offset) / @gridsystem-width) + @total-width*((@gutter-width*.5)/@gridsystem-width);
+}
+
+.pull(@offset:1) {
+	margin-right: @total-width*(((@gutter-width+@column-width)*@offset) / @gridsystem-width) + @total-width*((@gutter-width*.5)/@gridsystem-width);
+}
+
+
+// GLOBAL STYLES
+//----------------------------------------------------------
+
+// Fixes Box Model sizing issues
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+// img {
+// 	width: 100%; // makes all img 100% of it's container
+// }
+
+//Use this to force clear floated child elements
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+// COLOR VARIABLES
+//----------------------------------------------------------
+
+@off-white: #f9f9f9;
+@charcoal: #555;
+@visited: #ef3e6b;
+@grey: #474747;
+
+// GLOBAL STYLES
+//----------------------------------------------------------
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+	background: @off-white;
+	color: @charcoal;
+	font-family: 'Lato', sans-serif;
+	font-size: 19px;
+	line-height: 26px;
+}
+
+.container {
+	max-width: @gridsystem-width;
+	margin: 0 auto;
+	position: relative;
+	text-align: left;
+	overflow: hidden;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	font-family: 'Libre Baskerville', serif;
+	padding-right: ;
+	font-size: 30px;
+	line-height: 40px;
+	color: @grey;
+}
+
+h3 {
+	font-size: 22px;
+	line-height: 26px;
+}
+
+li,
+a {
+	list-style-type: none;
+	text-decoration: none;
+}
+
+a,
+a:visited {
+	color: @visited;
+}
+
+.work-content {
+	.pull(1);
+	.column(5);
+	margin: 50px;
+}
+
+.contact-blerb {
+	.push(5);
+}
+
+.alignleft {
+	float: left;
+}
+
+.alignright {
+	float: right;
+	margin-left: 100px;
+}
+
+.thumbs { /* Masonry container */
+	.column(12); //set to be max size
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
+    column-count: 2;
+    -moz-column-gap: 1em;
+    -webkit-column-gap: 1em;
+    column-gap: 1em;
+}
+
+.box { /* Masonry bricks or child elements */
+    display: inline-block;
+    margin: 0 0 1em;
+    width: 100%;
+}
+
+// NAV STYLES
+//----------------------------------------------------------
+
+.menu {
+	width: 100%;
+	background: white;
+	height: 108px;
+	top: 0px;
+	left: 0px;
+	padding: 25px;
+
+	li {
+		display: inline-block;
+	}
+}
+
+.nav1-menu {
+	.column(7);
+	margin: 25px;
+
+	li {
+		display: inline-block;
+		padding-top: 25px;
+		margin-right: 25px;
+	}
+}
+
+.menu a {
+	margin-right: 48px;
+}
+
+// MAIN STYLES
+//----------------------------------------------------------
+
+.quote {
+	font-family: 'Libre Baskerville', serif;
+	font-size: 22px;
+	line-height: 30px;
+}
+
+// FOOTER STYLES
+//----------------------------------------------------------
+
+footer {
+	background: #FCBB00;
+	bottom: 0;
+	padding: 50px;
+	font-family: 'Libre Baskerville', serif;
+	font-size: 19px;
+	line-height: 24px;
+}
