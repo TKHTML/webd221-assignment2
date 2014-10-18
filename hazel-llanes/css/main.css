@@ -1,0 +1,230 @@
+@font-face {
+  font-family: 'Calibre';
+  src: url('../fonts/calibre_font.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Plantin';
+  src: url('../fonts/plantin_font.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Plantin';
+  src: url("../fonts/plantin_font.ttf") format('truetype');
+}
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+html {
+  font-size: 62.5%;
+}
+img {
+  width: 100%;
+}
+p,
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+}
+p {
+  margin-bottom: 20px;
+}
+a {
+  color: #ef3e6b;
+  text-decoration: none;
+}
+body {
+  font: 1.9rem "Calibre", Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+  line-height: 26px;
+  background: #f9f9f9;
+  color: #555555;
+  padding: 20px 0 0 0;
+  font-weight: normal;
+}
+h2 {
+  font-size: 2.9rem;
+  font-family: "Plantin", Baskerville, Georgia, "Times New Roman", serif;
+  line-height: 40px;
+  font-weight: normal;
+  color: #555555;
+}
+h3 {
+  font-size: 1.7999999999999998rem;
+  font-family: "Calibre", Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+  line-height: 25px;
+  font-weight: normal;
+  color: #474747;
+}
+.tagline h2 {
+  padding-right: 40px;
+}
+.container {
+  width: 100%;
+  max-width: 1224px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+section {
+  display: inline-block;
+  float: left;
+  width: 96.40522875816994%;
+  margin: 0 1.7973856209150325%;
+}
+header {
+  display: inline-block;
+  float: left;
+  width: 96.40522875816994%;
+  margin: 0 1.7973856209150325%;
+}
+.logo {
+  background: transparent url("../img/Studio_Ghibli_logo.svg") no-repeat;
+  width: 240px;
+  height: 60px;
+  float: left;
+  border: 0;
+  font: 0/0 a;
+  text-shadow: none;
+  color: transparent;
+}
+nav {
+  display: inline-block;
+  float: left;
+  width: 46.40522875816993%;
+  margin: 0 1.7973856209150325%;
+  float: right;
+}
+nav li {
+  margin-right: 60px;
+}
+ul {
+  padding: 0;
+  text-align: left;
+}
+ul li {
+  display: inline-block;
+  list-style-type: none;
+}
+ul li a {
+  color: #555;
+}
+ul li a:hover {
+  color: #ef3e6b;
+}
+ul li .selected {
+  color: #ef3e6b;
+}
+#subnav {
+  margin: 50px 0;
+}
+#subnav ul {
+  display: inline-block;
+  float: left;
+  width: 63.0718954248366%;
+  margin: 0 1.7973856209150325%;
+}
+#subnav ul li {
+  margin-right: 20px;
+}
+#intro {
+  margin: 50px 0;
+}
+#intro .tagline,
+#intro .blurb,
+#intro .contact {
+  display: inline-block;
+  float: left;
+  width: 46.40522875816993%;
+  margin: 0 1.7973856209150325%;
+}
+#intro .tagline a,
+#intro .blurb a,
+#intro .contact a {
+  color: #ef3e6b;
+}
+#intro .tagline a:hover,
+#intro .blurb a:hover,
+#intro .contact a:hover {
+  border-bottom: 1px solid #ef3e6b;
+}
+#intro .contact {
+  float: right;
+}
+#intro .contact h2 {
+  padding-bottom: 30px;
+}
+#work {
+  margin: 0 0 15px 0;
+}
+#work article {
+  padding-bottom: 45px;
+}
+#work article.wide {
+  display: inline-block;
+  float: left;
+  width: 96.40522875816994%;
+  margin: 0 1.7973856209150325%;
+}
+#work article.half {
+  display: inline-block;
+  float: left;
+  width: 46.40522875816993%;
+  margin: 0 1.7973856209150325%;
+}
+#work a {
+  color: #555555;
+}
+#work a:hover {
+  color: #ef3e6b;
+}
+.caption {
+  font-size: 2rem;
+  font-family: "Plantin", Baskerville, Georgia, "Times New Roman", serif;
+  line-height: 25px;
+  font-weight: normal;
+}
+footer {
+  width: 100%;
+  padding: 40px 0;
+  background-color: #fcbb00;
+  display: table;
+}
+footer .contact-box {
+  float: left;
+  margin-right: 20px;
+  font-size: 1.5833333333333333rem;
+  display: table-cell;
+  vertical-align: middle;
+}
+footer a {
+  font-family: "Plantin", Baskerville, Georgia, "Times New Roman", serif;
+  color: #555555;
+}
+footer a:hover {
+  color: #ef3e6b;
+}
+.social {
+  float: right;
+  font-size: 2.8rem;
+  display: table-cell;
+  vertical-align: middle;
+}
+.social a {
+  color: #ffffff;
+  margin-right: 20px;
+}
+.social a:hover {
+  color: #ef3e6b;
+}

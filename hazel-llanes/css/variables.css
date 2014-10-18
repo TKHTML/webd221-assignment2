@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'Calibre';
+  src: url('../fonts/calibre_font.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Plantin';
+  src: url('../fonts/plantin_font.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
