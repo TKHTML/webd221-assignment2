@@ -1,0 +1,45 @@
+// Set the width based on number of columns of the grid
+@import url(http://fonts.googleapis.com/css?family=Sorts+Mill+Goudy|Open+Sans);
+@import "variables.less";
+
+
+.column(@x,@columns:@columns) {
+	// display: inline;
+	// float: left; //keeps causing isues in code
+	width: @total-width*((((@gutter-width+@column-width)*@x)-@gutter-width) / @gridsystem-width);
+    margin: 0 @total-width*((@gutter-width*.5)/@gridsystem-width);
+}
+
+.my-main-font {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  color: @main-col;
+  line-height: 190%;
+}
+.my-titles {
+  font-family: 'Sorts Mill Goudy', serif;
+  color: #666;
+}
+.my-quotes {
+	font-family: 'PT Serif', serif;
+	font-style: italic;
+
+}
+.states {
+	a {
+		color: @main-col;	
+	}
+	a:hover, 
+	a:active {
+			color: @pink;
+			text-decoration: none;
+		}
+}
+.inner-links {
+  color: @pink;
+  text-decoration: none;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+}
+
+
