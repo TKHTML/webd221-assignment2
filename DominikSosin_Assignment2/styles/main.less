@@ -1,0 +1,893 @@
+// VARIABLES & MIXINS
+//------------------------------------
+
+@fontSans: 'calibriregular';
+@fontSerif: 'corbenregular';
+@colorOver: #FF3333;
+
+.serifFontSet(@size) {
+	font-family: @fontSerif;
+	color: #555;
+	font-size: @size;
+}
+.sansFontSet(@size) {
+	font-family: @fontSans;
+	color: #666;
+	font-size: @size;
+}
+
+
+@column-width: 110;
+@gutter-width: 30;
+@columns: 12;
+
+// Utility variable — you should never need to modify this
+@gridsystem-width: (@column-width * @columns) + (@gutter-width * @columns) * 1px;
+
+// Set @total-width to 100% for a fluid layout
+@total-width: 100%;  //makes .column mixin turn into %
+
+.column(@x,@columns:@columns) {
+	display: inline;
+	float: left;
+	width: @total-width*((((@gutter-width+@column-width)*@x)-@gutter-width) / @gridsystem-width);
+	margin: 0 @total-width*((@gutter-width*.5)/@gridsystem-width);
+}
+
+// Fixes Box Model sizing issues
+*, *:before, *:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+//Use this to force clear floated child elements
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+img {					//Shared styles
+	width: 100%;
+}
+
+.container {				//Shared styles
+	max-width: @gridsystem-width;
+	margin: 0 auto;
+}
+
+header {					//Shared styles
+	margin-top: 30px;
+	
+	#logo {
+		.column(6);
+
+		.logo {
+			width: 170px;
+			height: 80px;
+		}
+	}
+
+	nav {
+		.column(6);
+		font-family: @fontSans;
+		font-weight: bold;
+		font-size: 20px;
+		margin-top: 16px;
+
+		li {
+			display: inline;
+			margin-right: 55px;
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+
+		a {
+			text-decoration: none;
+			padding: 10px 0 10px 0;
+			color: #666;
+
+			&:hover {
+				color: @colorOver;
+			}
+		}		
+	}
+}
+
+h2 {						//Shared styles
+	.serifFontSet(30px);
+	line-height: 38px;
+}
+
+h3 {						//Shared styles
+	.sansFontSet(22px);
+	line-height: 28px;
+
+	a {
+		color: @colorOver;
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}	
+}
+
+
+
+//Homepage styles
+
+#intro {
+	margin-top: 60px;
+
+	.start {
+
+		a:hover {
+			text-decoration: underline;
+		}
+	}
+	
+	h2 {
+		.column(6);
+	}
+
+	h3 {
+		.column(6);	
+	}
+
+	a {
+		text-decoration: none;
+	}
+
+	.hero {
+		.column(12);
+		margin-top: 70px;
+
+		p {
+			margin-top: 15px;
+		}	
+	}
+}
+
+.serif {				//Shared styles
+	.serifFontSet(22px);
+}
+
+.sans {					//Shared styles
+	.sansFontSet(18px);
+
+	&:hover {
+		color: @colorOver;
+	}
+}
+
+.carList {
+
+	li {
+		.column(4);
+		margin-top: 60px;
+	}
+
+	p {
+		margin-top: 15px;
+	}	
+
+	.slide:hover { 
+		opacity: .4; 
+		-webkit-transition: opacity 400ms;
+		transition: opacity 400ms;
+		-moz-transition: opacity 400ms;
+	}
+}
+
+.toTop {				//Shared styles
+	width: 30px;
+	float: right;
+	margin: 40px 30px 110px 0;
+}
+
+//Homepage styles end
+
+//About page styles
+
+.line {							//Shared styles
+	border-bottom: 1px solid;
+	width: 40px;
+	margin: 20px 0 20px 0;
+}
+
+#about {
+
+	.rightFloat {
+		.column(6);
+		float: right;
+		margin-top: 60px;
+	}
+
+	.mainList {
+		
+		.links {
+			.column(6);
+
+			li {
+				display: inline-block;
+				margin-right: 45px;
+				margin-top: 50px;
+
+				&:last-child {
+					margin-right: 0;
+				}		
+			}
+
+			a {
+				text-decoration: none;
+			}
+		}
+
+		.line {
+			margin: 16px 0 10px 0;
+			width: 20px;
+		}
+
+		img {
+			.column(12);
+			margin-top: 50px;
+		}
+
+		.leftFloat {
+			.column(6);
+			float: left;
+			clear: both;
+			margin-top: 60px;
+
+			p:first-of-type {
+				font-style: italic;
+			}
+		}
+
+	}
+}
+
+h4 {						//Shared styles
+	.sansFontSet(19px);
+	color: @colorOver;
+	font-weight: 600;
+	letter-spacing: 1px;
+}
+
+.sig {
+	.sansFontSet(18px);
+	color: @colorOver;
+	margin-top: 25px;
+}
+
+.sig2 {
+	.sansFontSet(16px);
+	margin-top: 4px;
+}
+
+.something {
+	margin-top: 60px;
+
+	.stock {
+		.column(6);
+	}
+
+	.desc {
+		.column(6);
+
+		.line {
+			margin: 16px 0 10px 0;
+			width: 20px;
+		}
+	}
+
+	h4:last-child {
+		margin-top: 20px;
+	}
+
+	 a {
+		text-decoration: none;
+	}
+}
+
+#fifth {
+	margin-top: 60px;
+
+	.pest {
+		.column(12);
+	}
+
+	h3 {
+		.column(1);
+	}
+
+	ul {
+		.column(5);
+				
+		li {
+			margin-bottom: 5px;
+		}
+
+		&:last-child {
+			padding-bottom: 30px;
+		}
+
+		a {
+			text-decoration: none;
+		}
+	}
+}
+
+h5 {					//Shared styles
+	.sansFontSet(19px);
+	font-weight: 600;
+	letter-spacing: 1px;
+}
+
+//About page styles end
+
+
+// Dealership page begins
+
+#dealer {
+
+	.begin {
+		.column(6);
+		margin-top: 60px;
+		float: right;
+	}
+
+	.hero2 {
+		.column(12);
+		margin-top: 60px;
+	}
+
+	.endInfo {
+		.column(6);
+		margin-top: 60px;
+		float: right;
+		.sansFontSet(22px);
+		line-height: 24px;
+
+		p {
+			margin-bottom: 20px;
+
+			a {
+				text-decoration: none;
+				color: @colorOver;
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+
+		p:last-of-type {
+			margin-bottom: 0;
+		}
+
+		ul {
+			margin-bottom: 20px;
+			list-style-type: disc;
+			list-style-position: inside;
+		}
+	}
+}
+
+// Dealership page ends
+
+
+footer {							//Shared styles
+	background-color: #fcbb01;
+	height: 100%;
+	clear: both;
+
+	p {
+		.sansFontSet(16px);
+		margin-bottom: 7px;
+	}
+
+	a {
+		.serifFontSet(20px);
+		text-decoration: none;
+
+		&:hover {
+			color: @colorOver;
+		}
+	}
+
+	.bottominfo {
+		padding-top: 50px;
+	}
+
+	.left {
+		.column(2);
+	}
+
+	.middle {
+		.column(6);
+	}
+
+	.right {
+		.column(4);
+		padding-top: 15px;
+		margin-bottom: 45px;
+
+		li {
+			width: 35px;
+			display: inline-block;
+			float: right;
+			margin-left: 9px;
+		}	
+	}
+}
+
+
+// Media queries are not fully based on original website 
+
+
+
+/* Media Query for Tablet Begins */
+
+@media screen and (min-width: 480px) and (max-width: 900px) {
+
+	header {						//Shared styles
+		margin: 0 15px 0 15px;
+
+		#logo {
+			.column(12);
+		}
+
+		nav {
+			.column(12);
+			margin-top: 30px;
+
+			li {
+			margin-right: 45px;
+			}	
+		}
+	}
+
+	h2 {							//Shared styles
+		font-size: 26px;
+		line-height: 32px;
+	}
+
+	h3 {							//Shared styles
+		font-size: 20px;
+		line-height: 28px;
+
+	}
+
+	.sans {							//Shared styles
+		font-size: 16px;
+	}
+
+	.serif {						//Shared styles
+		font-size: 20px
+	}
+
+	section {						//Shared styles
+		margin: 0 15px 0 15px;
+	}
+
+	// Homepage styles
+
+	#intro {
+		margin-top: 60px;
+		
+		h2 {
+			.column(12);
+			margin-bottom: 20px;
+		}
+
+		h3 {
+			.column(12);
+			margin-bottom: 20px;	
+		}
+
+		.hero {
+			.column(12);
+		}
+
+		.serif {
+			margin-bottom: 30px;
+			font-size: 20px
+		}
+
+		.carList {
+
+			li {
+				.column(6);
+			}
+		}
+	}
+
+	//Homepage styles end
+
+	.toTop {								//Shared styles
+		margin-bottom: 60px;
+	}
+
+	h5 {									//Shared styles
+		font-size: 18px;
+	}
+
+	h4 {									//Shared styles
+		font-size: 18px;
+	}
+
+	//About page styles
+
+	#about {
+
+		.rightFloat {
+			.column(12);
+			margin-top: 40px;
+		}
+
+		.mainList {
+			
+			.links {
+				.column(12);
+
+				li {
+					margin-top: 40px;		
+				}
+			}
+
+			img {
+				.column(12);
+				margin-top: 30px;
+			}
+
+			.leftFloat {
+				.column(12);
+				margin-top: 40px;
+			}
+		}
+
+		.something {
+			margin-top: 40px;
+
+			.stock {
+				.column(12);
+				margin: 20px 0 40px 0;
+
+				&:nth-child(2) {
+					margin-bottom: 0;
+				}
+			}
+
+			.desc {
+				.column(12);
+			}
+		}
+
+		#fifth {
+			margin-top: 40px;
+
+			.pest {
+				.column(12);
+			}
+
+			h3 {
+				.column(2);
+			}
+
+			ul {
+				.column(10);
+			}
+		}
+	}
+
+	//About page styles end
+
+	// Dealership page begins
+
+	#dealer {
+
+		.begin {
+			.column(12);
+			margin-top: 40px;
+			float: right;
+		}
+
+		.hero2 {
+			.column(12);
+			margin-top: 40px;
+			margin-bottom: 15px;
+		}
+
+		.endInfo {
+			.column(12);
+			margin-top: 60px;
+			float: none;
+			font-size: 20px;
+			line-height: 20px;
+
+			p {
+				margin-bottom: 10px;
+			}
+		}
+	}
+
+	// Dealership page ends
+
+	footer {						//Shared styles
+
+		p {
+			font-size: 16px;
+		}
+
+		a {
+			font-size: 20px;
+		}						
+
+		.bottominfo {
+			padding-top: 30px;
+			margin: 0 15px 0 15px;
+		}
+
+		.left {
+			.column(6);
+		}
+
+		.middle {
+			.column(6);
+		}
+
+		.right {
+			.column(12);
+			padding-top: 15px;
+			padding-right: 30px;
+			margin-bottom: 45px;
+
+			li {
+				width: 35px;
+				display: inline-block;
+				margin: 10px 0 0 9px;
+			}	
+		}
+	}
+}
+
+
+
+
+/* Media Query for Tablet Ends */
+/* Media Query for Mobile Begins */
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+
+	header {							//Shared styles
+		margin-left: 5px;
+		margin-right: 5px;
+
+		#logo {
+			.column(12);
+
+			img {
+			transform: scale(.7);
+			}
+		}
+
+		nav {
+			.column(12);
+			margin-top: 30px;
+			font-size: 18px;
+
+			li {
+			margin-right: 15px;
+			}			
+		}
+	}
+
+	section {							//Shared styles
+		margin: 0 8px 0 8px;
+	}
+
+	h2 {								//Shared styles
+		font-size: 22px;
+		line-height: 28px;
+	}
+
+	h3 {								//Shared styles
+		font-size: 18px;
+		line-height: 18px;
+	}
+
+	.sans {								//Shared styles
+		font-size: 14px;
+	}
+
+	.serif {							//Shared styles
+		font-size: 18px
+	}
+
+	//Homepage styles
+
+	#intro {
+		margin-top: 60px;
+		
+		h2 {
+			.column(12);
+			margin-bottom: 20px;
+		}
+
+		h3 {
+			.column(12);
+			margin-bottom: 20px;	
+		}
+
+		.hero {
+			.column(12);
+		}
+
+		.serif {
+			margin-bottom: 30px;
+		}
+	}
+
+	.carList {
+
+		li {
+			.column(12);
+		}
+	}
+
+	//Homepage styles end
+
+	.toTop {								//Shared styles
+		margin-bottom: 60px;
+	}
+
+	h5 {									//Shared styles
+		font-size: 16px;
+	}
+
+	h4 {									//Shared styles
+		font-size: 16px;
+	}
+
+
+	//About page styles
+
+	#about {
+
+		.rightFloat {
+			.column(12);
+			margin-top: 40px;
+		}
+
+		.mainList {
+			
+			.links {
+				.column(12);
+
+				li {
+					margin-top: 40px;
+					margin-right: 25px;		
+				}
+			}
+
+			img {
+				.column(12);
+				margin-top: 20px;
+			}
+
+			.leftFloat {
+				.column(12);
+				margin-top: 20px;
+			}
+
+		}
+
+		.something {
+			margin-top: 40px;
+
+			.stock {
+				.column(12);
+				margin: 20px 0 40px 0;
+
+				&:nth-child(2) {
+					margin-bottom: -40px;
+				}
+			}
+
+			.desc {
+				.column(12);
+			}
+		}
+
+		#fifth {
+			margin-top: 40px;
+
+			.pest {
+				.column(12);
+			}
+
+			h3 {
+				.column(2);
+			}
+
+			ul {
+				.column(10);
+			}
+		}
+	}
+
+	//About page styles end
+
+	// Dealership page begins
+
+	#dealer {
+
+		.begin {
+			.column(12);
+			margin-top: 40px;
+			float: right;
+		}
+
+		.hero2 {
+			.column(12);
+			margin-top: 40px;
+			margin-bottom: 15px;
+		}
+
+		.endInfo {
+			.column(12);
+			margin-top: 60px;
+			float: none;
+			font-size: 18px;
+			line-height: 20px;
+
+			p {
+				margin-bottom: 10px;
+			}
+		}
+	}
+
+	// Dealership page ends
+
+	footer {							//Shared styles
+
+		p {
+			font-size: 14px;
+		}
+
+		a {
+			font-size: 18px;
+		}
+
+		.bottominfo {
+			padding-top: 30px;
+			margin: 0 8px 0 8px;
+		}
+
+		.left {
+			.column(6);
+		}
+
+		.middle {
+			.column(6);
+		}
+
+		.right {
+			.column(12);
+			padding-top: 10px;
+			margin-bottom: 25px;
+
+			li {
+				margin: 10px 0 0 9px;
+			}	
+		}
+	}
+}
+
+
+
