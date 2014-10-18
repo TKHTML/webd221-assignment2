@@ -1,0 +1,313 @@
+@import "variables.less";
+@import "mixins.less";
+
+// GLOBAL STYLES
+//----------------------------------------------------------
+
+// Fixes Box Model sizing issues
+html {
+  box-sizing: border-box;
+}
+
+// Fixes padding and margin
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+//Use this to force clear floated child elements
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+img {
+	padding: 10px;
+	width: 100%;
+}
+
+//SHARED STYLES
+//-------------------------------------
+
+.container {
+	max-width: @gridsystem-width;
+	margin: 0 auto;
+	// z-index: 1;
+	// position: relative;
+	// margin-bottom: 160px; 
+	// background: #f9f9f9;
+}
+
+body {
+	background: @bodyColor;
+}
+
+h1, h2, h3, h4 {
+	font-weight: normal;
+}
+
+h1 {
+	color: @hoverColor;
+}
+
+h2 {
+	padding: 0;
+	font-size: 30px;
+	font-family: @secondary-font;
+	color: @h3FontColor;
+}
+
+h3 {
+	margin: 0;
+	padding: 0;
+	color: @h3FontColor;
+}
+
+h4 {
+	font-size: 14px;
+	margin-bottom: 10px; 
+	font-family: @main-font; 
+	color: @lightGrey;
+}
+
+li {
+	list-style-type: none;
+	display: inline-block;
+}
+
+a {
+	text-decoration: none;
+	font-size: 14spx;
+	color: #000;
+	font-family: @main-font;
+	color: @hoverColor;
+
+	&:hover {
+		color: @hoverColor;
+		transition: color .25s ease-in-out, border-color .25s ease-in-out;
+	}
+}
+
+p {
+	margin: 0;
+	padding: 0;
+	font-family: @main-font;
+	color: @mainFontColor;
+	line-height: 26px;
+	font-size: 14px;
+}
+
+.underline {
+	content: "";
+	width: 40px;
+	height: 1px;
+	display: block;
+	position: relative;
+	left: 1px;
+	bottom: 0;
+	background: #898989;
+	margin: 20px 0; 
+}
+
+.underline-small {
+	content: "";
+	width: 20px;
+	height: 1px;
+	display: block;
+	position: relative;
+	left: 1px;
+	bottom: 0;
+	background: #898989;
+	margin: 10px 10px;  
+}
+
+//HEADER 
+//-------------------------------------
+
+header {
+	height: 120px;
+	padding-top: 20px;
+}
+
+.logo {
+	.column(6);
+	padding: 15px;
+}
+
+nav {
+	.column(6);
+	padding-top: 25px;
+	
+	li {
+		margin-right: 60px;
+	}
+
+	a {
+		color: @mainFontColor;
+	}
+}
+
+//CONTACT INFO TOP
+//--------------------------------------
+.contact-info {
+	padding: 30px 0;
+}
+
+.contact-left {
+	.column(6);
+	padding: 15px;
+
+	h1 {
+		font-family: @secondary-font;
+		color: @mainFontColor;
+	}
+
+	a {
+		border-bottom: 1px solid @bodyColor;
+
+		&:hover {
+			border-bottom: 1px solid @hoverColor;
+		}
+	}
+}
+
+.contact-right {
+	padding: 15px 0;
+	.column(6);
+
+	a {
+		border-bottom: 1px solid @bodyColor;
+
+		&:hover {
+			border-bottom: 1px solid @hoverColor;
+		}
+	}
+}
+
+.contact-email {
+	width: 100%;
+	margin-top: 20px;
+	margin-bottom: 40px;
+}
+
+.contact-visit {
+	width: 45%;
+	float: left;
+}
+
+.contact-address {
+	width: 45%;
+	float: right;
+	margin-bottom: 20px;
+}
+
+//PARKING INFO
+//--------------------------------------
+
+.parking-info {
+	.column(6);
+	margin-left: 50%;
+	padding: 10px 0;
+}
+
+
+// SUB NAV
+//-------------------------------------
+
+.sub-nav {
+	.column(12);
+	
+	ul {
+		margin-bottom: 30px;
+	}
+
+	li {
+		margin-right: 32px;
+	}
+}
+
+//MAIN INFO
+//--------------------------------------
+
+.people {
+	.column(4); 
+	padding-bottom: 60px;
+
+	h3 {
+		font-family: @secondary-font;
+		font-size: 22px;
+		padding-bottom: 10px; 
+		padding-left: 10px; 
+	}
+
+	p {
+		line-height: 21px;
+		padding-left: 10px; 
+	}
+
+	a {
+		border-bottom: 1px solid @bodyColor;
+
+		&:hover {
+			border-bottom: 1px solid @hoverColor;
+		}
+	}
+}
+
+//BACK TO TOP
+//---------------------------------------
+
+.back-to-top {
+	.column(1);
+	margin-left: 55%;
+	margin-top: 50%; 
+}
+
+//FOOTER
+//---------------------------------------
+
+footer{
+	// position: fixed;
+	// bottom: 0;
+	// left: 0;
+	width: 100%;
+	background: @footerColor;
+	padding-top: 60px;
+	height: 160px;
+
+	a {
+		color: @mainFontColor;
+		font-family: @secondary-font;
+		font-size: 18px;
+	}
+}
+
+.email {
+	.column(4);
+	padding-left: 20px;
+}
+
+.email,
+.visit {
+	p {
+		padding-bottom: 5px; 
+	}
+}
+
+.visit {
+	.column(6);
+}
+
+.social-media {
+	.column(2);
+
+	i {
+		color: rgba(255,255,255,0.7);
+		margin-right: 20px; 
+
+		&:hover {
+			color: rgba(255, 255, 255, 1);
+			transition: color .25s ease-in-out;
+		}
+	}
+}
