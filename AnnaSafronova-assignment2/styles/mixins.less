@@ -1,0 +1,40 @@
+//grid
+.column(@x,@columns:@columns) {
+  display: inline;
+  float: left;
+  width: @total-width*((((@gutter-width+@column-width)*@x)-@gutter-width) / @gridsystem-width);
+  margin: 0 @total-width*((@gutter-width*.5)/@gridsystem-width);
+}
+
+//style mixins
+.heading(){
+	font-family: @headings-font-family;
+	color: @headings-color;
+	text-transform: uppercase;
+}
+
+.button() {
+	display: block;
+	padding: 0.6em 2.143em;
+	margin: 2em auto 0 auto;
+	background-color: @cta-color;
+	text-transform: uppercase;
+	font-family: @headings-font-family;
+	border: none;
+	&:hover {
+		background-color: @cta-hover-color;
+	}
+	&:focus {
+		outline: none;
+	}
+
+}
+
+.slider-arrow(){
+	display: inline-block;
+	float: right;
+	margin-right: 10px;
+	width: 55px;
+	height: 55px;
+}
+		
