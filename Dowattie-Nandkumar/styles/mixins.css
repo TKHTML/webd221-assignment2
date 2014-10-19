@@ -1,0 +1,29 @@
+@import url(http://fonts.googleapis.com/css?family=Sorts+Mill+Goudy|Open+Sans);
+.my-main-font {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  color: #555555;
+  line-height: 190%;
+}
+.my-titles {
+  font-family: 'Sorts Mill Goudy', serif;
+  color: #666;
+}
+.my-quotes {
+  font-family: 'PT Serif', serif;
+  font-style: italic;
+}
+.states a {
+  color: #555555;
+}
+.states a:hover,
+.states a:active {
+  color: #ee3f6b;
+  text-decoration: none;
+}
+.inner-links {
+  color: #ee3f6b;
+  text-decoration: none;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+}
