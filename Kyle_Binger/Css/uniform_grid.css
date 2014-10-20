@@ -1,0 +1,76 @@
+@import url("fonts.css");
+@import url("margins.css");
+@import url("global.css");
+.container {
+  max-width: 1224px;
+  margin: 0 auto;
+}
+header {
+  margin-top: 35px;
+  margin-bottom: 50px;
+}
+footer {
+  padding-top: 45px;
+  padding-bottom: 45px;
+  background: #fcbb00;
+  background-position: fixed;
+}
+#logo {
+  display: inline;
+  float: left;
+  width: 46.40522875816993%;
+  margin: 0 1.7973856209150325%;
+}
+nav {
+  display: inline;
+  float: left;
+  width: 46.40522875816993%;
+  margin: 0 1.7973856209150325%;
+}
+#hero {
+  display: inline;
+  float: left;
+  width: 96.40522875816994%;
+  margin: 0 1.7973856209150325%;
+}
+#email {
+  display: inline;
+  float: left;
+  width: 21.405228758169933%;
+  margin: 0 1.7973856209150325%;
+}
+#faddress {
+  display: inline;
+  float: left;
+  width: 38.0718954248366%;
+  margin: 0 1.7973856209150325%;
+}
+#social {
+  display: inline;
+  float: left;
+  width: 29.73856209150327%;
+  margin: 0 1.7973856209150325%;
+  padding-top: 25px;
+  padding-left: 233px;
+}
+section {
+  display: inline;
+  float: left;
+  width: 46.40522875816993%;
+  margin: 0 1.7973856209150325%;
+}
+#hero:hover img {
+  -webkit-filter: grayscale(50%);
+}
+#hero:hover p {
+  color: #ef3e6b;
+}
+article:hover img {
+  -webkit-filter: grayscale(100%);
+}
+article:hover p {
+  color: #ef3e6b;
+}
+a:hover {
+  color: #ef3e6b;
+}
