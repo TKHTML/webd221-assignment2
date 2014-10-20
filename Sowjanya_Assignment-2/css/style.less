@@ -1,0 +1,249 @@
+// GRID VARIABLES & MIXINS  ---------
+
+// Change this values to change the size of the grid
+
+@column-width: 240;
+@gutter-width: 28;
+@columns: 12;
+
+// Utility variable — you should never need to modify this
+@gridsystem-width: (@column-width * @columns) + (@gutter-width * @columns) * 1px;
+
+// Set @total-width to 100% 
+@total-width: 100%;  
+
+.column(@x,@columns:@columns) {
+	display: inline;
+	float: left;
+	width: @total-width*((((@gutter-width+@column-width)*@x)-@gutter-width) / @gridsystem-width);
+	margin: 0 @total-width*((@gutter-width*.5)/@gridsystem-width);
+}
+
+.font(@font-size,@font-family,@font-weight,@color) {
+	font-size: @font-size;
+	font-family: @font-family;
+	font-weight: @font-weight;
+	color: @color;
+}
+// FONT FAMILY VARIABLES
+
+@bodyFont: 'Georgia, Times, 'Times New Roman', serif';
+
+// COLOR VARIABLES
+@blue: #eef7fb;
+@darkblue: #72b5cc;
+@hover: #dcedf3;
+@main-color: #8a8a8a;
+
+// GLOBAL STYLES
+
+html {
+  box-sizing: border-box;
+  background-color: #72b5cc;
+}
+
+*,
+*:before, 
+*:after {
+  box-sizing: inherit;
+}
+
+.clearfix:after {
+  content: "";
+  display: block;
+  visibility: hidden;
+  clear: both;
+}
+
+img {
+	width: 100%;
+}
+
+.container {
+	max-width: @gridsystem-width;
+	margin: 0 auto;
+	overflow: hidden;
+	font-family: @bodyFont;
+	line-height: 24px;
+	color: @main-color;
+	font-size: 1em;
+}
+
+
+header {
+	.column(2);
+	height: 1px;
+		img {
+			.column(10);
+			padding: 30px 0px 15px 0px;
+
+		}
+}
+
+ul {
+		list-style-type: none;
+		padding: 0;
+}
+
+nav {
+	position: fixed;
+	font-family: @NavFont;
+	font-size: 9pt;
+	color: @darkblue;
+	text-decoration: none;
+	text-transform: uppercase;
+	padding-left: 10px;
+
+		li{
+			letter-spacing: 2px;
+			display: block;
+			padding: 5px 0px 0px 26px;
+		}
+	
+	a:link {
+	    text-decoration: none;
+	}
+
+	a:visited {
+	    color:@darkblue;
+	}
+
+	a:hover{
+		color: #4896b0;
+	}
+
+	a:active li{
+	    background-color:  @hover;
+	}
+}
+section {
+	.column(10);
+}
+
+#social_links  {
+	position: absolute;
+	bottom:0px;
+	padding-bottom: 30px;
+	padding-left: 40px;
+	overflow: hidden;
+	padding: 0 !important;
+	margin: 14px 4px 0 0;
+	
+	i {
+		font-size: 22px;
+		background-color: @darkblue;
+	}
+}
+
+article {
+	border-bottom: 1px solid;
+	border-color: #c9c9c9; 
+	padding-bottom: 65px;
+}
+
+h4 {
+	font-family: @NavFont;
+	font-size: 13pt;
+	padding: 60px 0px 20px 0px;
+	color: @darkblue;
+
+	
+}
+
+.gallery {
+	overflow: hidden;
+	ul {
+		padding: 0;
+		li{
+			.column(3);
+			padding-bottom: 12px;
+			img {
+				border: 12px solid;
+				border-color: #fff; 
+				transition: opacity 0.3s ease-in-out;
+				&:hover{
+					opacity: 0;
+				}
+			}
+		}
+
+		li:hover {
+		    background: url(../img/hover_image.jpg)  no-repeat;
+		    .column(3);
+		}
+	}
+}
+
+.about {
+	#left_about {
+		.column(6);
+			span {
+				font-size: 28px;
+				line-height: 25px;
+			}
+			div {
+				font-size: 24px;
+				line-height: 25px;
+				text-align: right;
+				padding-right:40px;
+				font-style: italic;
+				}
+		}
+	
+	#right_about {
+		.column(6);
+		}
+	
+}
+	
+.contact {
+	div{
+		padding: 0px 15px 15px 15px;
+	}
+	h4 {
+	font-size: 16px;
+	}
+	h3{
+		padding: 0px 10px 10px 10px;
+	}
+}
+
+footer {
+	.column(12);
+	padding: 10px 0px 30px 0px;
+
+		#left_footer {
+			float: left;
+		}
+		#right_footer {
+			float: right;
+		}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
