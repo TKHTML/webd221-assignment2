@@ -1,0 +1,103 @@
+@import url("fonts.css");
+@import url("margins.css");
+@import url("global.css");
+.container {
+  max-width: 1224px;
+  margin: 0 auto;
+}
+#logo {
+  display: inline;
+  float: left;
+  width: 46.40522875816993%;
+  margin: 0 1.7973856209150325%;
+}
+nav {
+  display: inline;
+  float: left;
+  width: 46.40522875816993%;
+  margin: 0 1.7973856209150325%;
+}
+#contact {
+  display: inline;
+  float: left;
+  width: 46.40522875816993%;
+  margin: 0 1.7973856209150325%;
+}
+#contact2 {
+  display: inline;
+  float: left;
+  width: 46.40522875816993%;
+  margin: 0 1.7973856209150325%;
+}
+#address {
+  float: left;
+}
+#mailingAddress {
+  margin-right: 150px;
+  float: right;
+}
+#map {
+  display: inline;
+  float: left;
+  width: 96.40522875816994%;
+  margin: 0 1.7973856209150325%;
+}
+#mapText {
+  margin-left: 600px;
+}
+#team {
+  display: inline;
+  float: left;
+  width: 96.40522875816994%;
+  margin: 0 1.7973856209150325%;
+}
+#email {
+  display: inline;
+  float: left;
+  width: 21.405228758169933%;
+  margin: 0 1.7973856209150325%;
+}
+#faddress {
+  display: inline;
+  float: left;
+  width: 38.0718954248366%;
+  margin: 0 1.7973856209150325%;
+}
+#social {
+  display: inline;
+  float: left;
+  width: 29.73856209150327%;
+  margin: 0 1.7973856209150325%;
+  padding-top: 25px;
+  padding-left: 233px;
+}
+.line {
+  height: 1px;
+  width: 40px;
+  background: #474747;
+  margin-left: 1px;
+}
+.line2 {
+  height: 1px;
+  width: 20px;
+  background: #474747;
+  margin-left: 1px;
+}
+section {
+  display: inline;
+  float: left;
+  width: 46.40522875816993%;
+  margin: 0 1.7973856209150325%;
+}
+article {
+  display: inline;
+  float: left;
+  width: 29.73856209150327%;
+  margin: 0 1.7973856209150325%;
+}
+article:hover img {
+  -webkit-filter: hue-rotate(180deg);
+}
+a:hover {
+  color: #ef3e6b;
+}

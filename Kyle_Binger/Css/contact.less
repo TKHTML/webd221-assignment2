@@ -1,0 +1,120 @@
+@import url("fonts.css");
+@import url("margins.css");
+@import url("global.css");
+
+// GRID VARIABLES & MIXINS
+//------------------------------------
+// http://gridcalculator.dk - grid calculator
+
+// Change this values to change the size of the grid
+// 1180px grid width
+@column-width: 58;
+@gutter-width: 44;
+@columns: 12;
+
+// Utility variable — you should never need to modify this
+@gridsystem-width: (@column-width * @columns) + (@gutter-width * @columns) * 1px;
+
+// Set @total-width to 100% for a fluid layout
+// @total-width: @gridsystem-width;
+@total-width: 100%; //makes .column mixin turn into percentages
+
+.column(@x,@columns:@columns) {
+	display: inline;
+	float: left;
+	width: @total-width*((((@gutter-width+@column-width)*@x)-@gutter-width) / @gridsystem-width);
+	margin: 0 @total-width*((@gutter-width*.5)/@gridsystem-width);
+}
+
+// GLOBAL STYLES
+//----------------------------------------------------------
+
+.container {
+	max-width: @gridsystem-width;
+	margin: 0 auto;
+}
+
+//-------------Column Breakdown------------------
+
+#logo {
+	.column(6);
+}
+
+nav {
+	.column(6);
+}
+
+#contact {
+	.column(6);
+}
+
+#contact2 {
+	.column(6);
+}
+
+#address {
+	float: left
+}
+
+#mailingAddress {
+	margin-right: 150px;
+	float: right;
+}
+
+#map {
+	.column(12);
+}
+
+#mapText {
+	margin-left: 600px;
+}
+
+#team {
+	.column(12);
+}
+
+#email {
+	.column(3);
+}
+
+#faddress {
+	.column(5);
+}
+
+#social {
+	.column(4);
+	padding-top: 25px;
+	padding-left: 233px;
+}
+
+.line {
+	height: 1px;
+	width:40px;
+	background: #474747;
+	margin-left: 1px;
+}
+
+.line2 {
+	height: 1px;
+	width:20px;
+	background: #474747;
+	margin-left: 1px;
+}
+
+section {
+	.column(6);
+}
+
+article {
+	.column(4);
+}
+
+//---------------------Hover States-----------------
+
+article:hover img {
+	-webkit-filter: hue-rotate(180deg);
+}
+
+a:hover {
+	color: #ef3e6b;
+}

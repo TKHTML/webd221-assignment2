@@ -1,0 +1,43 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+section {
+  padding: 0;
+  margin: 0;
+}
+ul {
+  padding: 0;
+}
+li {
+  padding-right: 60px;
+  display: inline;
+}
+.imgWidth {
+  width: 100%;
+}
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.floatLeft {
+  float: left;
+}
+#returnTop {
+  margin-left: 1225px;
+}
+header {
+  margin-top: 35px;
+  margin-bottom: 50px;
+}
+footer {
+  padding-top: 45px;
+  padding-bottom: 45px;
+  background: #fcbb00;
+  background-position: fixed;
+}
