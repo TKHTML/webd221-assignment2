@@ -1,0 +1,163 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+body {
+  background: #f9f9f9;
+  color: #474747;
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  max-width: 1056px;
+  margin: 0 auto;
+}
+h2 {
+  color: #555555;
+  font-family: "Times New Roman", serif;
+  font-size: 30px;
+}
+h3 {
+  font-size: 18px;
+}
+h4 {
+  font-size: 14px;
+}
+p {
+  font-size: 16px;
+}
+a {
+  color: #474747;
+  text-decoration: none;
+}
+a:hover {
+  color: #ef3e6b;
+}
+li {
+  display: inline-block;
+}
+header {
+  background: #ffffff;
+}
+.logo {
+  display: inline;
+  float: left;
+  width: 48.484848484848484%;
+  margin: 0 0.7575757575757576%;
+  margin: 25px 0;
+}
+nav {
+  display: inline;
+  float: left;
+  width: 48.484848484848484%;
+  margin: 0 0.7575757575757576%;
+  margin: 35px 0;
+}
+nav a {
+  font-size: 18px;
+  padding-right: 40px;
+  color: #555555;
+}
+.secondary_nav {
+  margin-right: 50.75757575757576%;
+  margin: 60px 0;
+}
+.secondary_nav a {
+  font-size: 16px;
+  padding-right: 30px;
+}
+.intro {
+  padding: 40px 0;
+}
+.intro h2 {
+  display: inline;
+  float: left;
+  width: 48.484848484848484%;
+  margin: 0 0.7575757575757576%;
+}
+.intro p {
+  display: inline;
+  float: left;
+  width: 48.484848484848484%;
+  margin: 0 0.7575757575757576%;
+}
+.intro p a {
+  color: #ef3e6b;
+}
+.intro p a:hover {
+  text-decoration: underline;
+}
+article {
+  display: inline;
+  float: left;
+  width: 48.484848484848484%;
+  margin: 0 0.7575757575757576%;
+  padding-bottom: 40px;
+}
+article img {
+  width: 100%;
+}
+.featured {
+  display: inline;
+  float: left;
+  width: 98.48484848484848%;
+  margin: 0 0.7575757575757576%;
+}
+.featured img {
+  width: 100%;
+}
+.about h2 {
+  margin-left: 50.75757575757576%;
+}
+.about_info {
+  margin-left: 50.75757575757576%;
+  padding: 40px 0;
+}
+.about_info ul {
+  list-style-type: circle;
+}
+.about_info ul li {
+  display: list-item;
+}
+.backtotop {
+  margin-left: 92.42424242424241%;
+  padding: 40px 0;
+}
+footer {
+  clear: both;
+  background: #fcbb00;
+}
+footer p {
+  font-size: 14px;
+}
+footer p a {
+  font-family: "Times New Roman", serif;
+  font-size: 18px;
+}
+.footer-contact {
+  display: inline;
+  float: left;
+  width: 23.484848484848484%;
+  margin: 0 0.7575757575757576%;
+  padding: 40px 0;
+}
+.social-links {
+  display: inline;
+  float: left;
+  width: 31.818181818181817%;
+  margin: 0 0.7575757575757576%;
+  padding: 60px 0;
+}
+i {
+  padding-right: 10px;
+}
