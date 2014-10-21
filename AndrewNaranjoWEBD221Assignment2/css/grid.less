@@ -1,0 +1,315 @@
+// GRID VARIABLES & MIXINS
+//------------------------------------
+// http://gridcalculator.dk - grid calculator
+
+// Change this values to change the size of the grid
+@column-width: 122;
+@gutter-width: 20;
+@columns: 12;
+
+// Utility variable — you should never need to modify this
+@gridsystem-width: (@column-width * @columns) + (@gutter-width * @columns) * 1px;
+
+// Set @total-width to 100% for a fluid layout
+//@total-width: @gridsystem-width;
+@total-width: 100%;
+
+.column(@x,@columns:@columns) {
+	float: left;
+	width: @total-width*((((@gutter-width+@column-width)*@x)-@gutter-width) / @gridsystem-width);
+	margin: 0 @total-width*((@gutter-width*.5)/@gridsystem-width);
+}
+
+// GLOBAL STYLES
+//----------------------------------------------------------
+
+@font-face {
+    font-family: plantin;
+    src: url(plantin.ttf);
+
+}
+
+// Fixes Box Model sizing issues
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+body {
+	background :#f9f9f9;
+}
+
+
+p {
+	font-family: Candara, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+	font-weight:lighter;
+	font-size: 17px;
+	color: #555;
+}
+
+
+	
+#container {
+	max-width: @gridsystem-width;
+	margin: 0 auto;
+	overflow: hidden;
+	height:2450px; 
+}
+
+
+// Navigation Styles
+nav
+{
+	width: 100%;
+	height: 108px;
+
+}
+
+
+#containerNav{
+	position: relative;
+	top:20%;
+	max-width: @gridsystem-width;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+#Nav {
+	.column(6);
+	ul {
+	text-align: left;
+	padding: 0;
+
+		li {
+		list-style-type: none;
+    	display: inline;
+			a {
+			text-decoration: none;
+			color:#555;
+			margin-right: 30px;
+			font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+			font-size: 18px;
+			font-weight:lighter;
+			}
+		}
+	}
+}
+
+#logo {
+	.column(6);
+	overflow: hidden;
+	margin-top: 2px;
+
+}
+
+
+#u{
+	background: url("../img/u.svg") 0 9px no-repeat;
+	width: 29px;
+	height: 52px;
+	display: block;
+	float: left;
+	margin-right: 4px;
+	margin-top: 1px;
+	
+		
+
+}
+#niform{
+	background: url("../img/niform.svg") 0 3px no-repeat;
+	width: 127px;
+	height: 59px;
+	display: block;
+	float: left;
+
+
+}
+#strategisk{
+	background: url("../img/strategisk.svg") 0 3px no-repeat;
+	width: 150px;
+	height: 58px;
+	display: block;
+
+
+}
+
+//Articles 
+
+#header1 {
+	.column(6);
+	padding: 15px;
+	margin: 0;
+	
+
+	p{
+		font-family: Candara, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif; 
+		font-size:31px; 
+	}
+}
+
+#para1{
+	.column(6);
+	padding: 15px;
+	margin: 0;
+	margin-top: 20px;
+	margin-left: 15px;
+	line-height: 140%;
+
+
+	a{
+		color:#ef3e6b; 
+		text-decoration: none;
+	}
+
+}
+
+#Article1 {
+
+	padding:15px 15px 45px 15px;
+
+	h1 {
+		font-family: Candara, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+		color:#555;
+		font-size: 18px;
+		font-weight: lighter;
+	
+
+		p{
+			color: #474747;
+			font-size: 22px;
+		
+
+			img{
+				width:100%;
+				max-width: 1703px;
+				margin-top: 50px;
+			}
+		}
+	}
+}
+
+#articlepics{
+	overflow: auto;
+	padding: 0;
+	margin-bottom: 15px;
+
+	article {
+		
+		display: inline-block;
+		max-width: 534px;  
+        vertical-align: top;
+        margin: 15px;
+       
+		
+		h1 {
+			margin: 0;
+			padding: 12px 0 11px 0;
+			color:#555;
+			font-size: 17px;
+			font-family: Candara, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+			font-weight: lighter;
+		}
+		p {
+			margin: 0;
+			padding: 0;
+			color: #474747;
+			font-size: 22px;
+			font-weight: 999;
+		}
+
+		img {
+			width: 100%;
+		}
+
+		.Ekebergparken{
+			margin-top: 30px;
+		}
+	}
+}
+
+#icon{
+	overflow: auto;
+	padding: 0;
+	float: right;
+	margin-right: 30px;
+	margin-top: -30px;
+
+	img{
+		height: 15px;
+		width: 20px;
+	}
+}
+
+
+footer {
+	width:100%;
+	bottom: 0;
+	height: 132px;
+	overflow: hidden;
+	background: #fcbb00;
+	color: #474747;
+
+	#info {
+		.column(8);
+
+		p {
+			padding: 25px 30px 0 100px;
+			float: left;
+        	font-size: 14px;
+        	line-height: 180%;
+        	
+
+		        .name{
+		        	font-size: 20px;
+		        
+
+		        a{
+		        	text-decoration: none;
+		        	color: #474747;
+				}
+			}
+		}
+	}
+}
+
+#social{
+	list-style:none;
+	float: right;
+	margin-right: 120px;
+	margin-top: 45px;
+
+	li{
+		display: inline;
+		margin-left: 20px;
+
+		img{
+			height: 25px;
+			width: 25px;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

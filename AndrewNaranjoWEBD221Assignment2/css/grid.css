@@ -1,0 +1,218 @@
+@font-face {
+  font-family: plantin;
+  src: url(plantin.ttf);
+}
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+body {
+  background: #f9f9f9;
+}
+p {
+  font-family: Candara, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+  font-weight: lighter;
+  font-size: 17px;
+  color: #555;
+}
+#container {
+  max-width: 1704px;
+  margin: 0 auto;
+  overflow: hidden;
+  height: 2450px;
+}
+nav {
+  width: 100%;
+  height: 108px;
+}
+#containerNav {
+  position: relative;
+  top: 20%;
+  max-width: 1704px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+#Nav {
+  float: left;
+  width: 48.82629107981221%;
+  margin: 0 0.5868544600938966%;
+}
+#Nav ul {
+  text-align: left;
+  padding: 0;
+}
+#Nav ul li {
+  list-style-type: none;
+  display: inline;
+}
+#Nav ul li a {
+  text-decoration: none;
+  color: #555;
+  margin-right: 30px;
+  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+  font-size: 18px;
+  font-weight: lighter;
+}
+#logo {
+  float: left;
+  width: 48.82629107981221%;
+  margin: 0 0.5868544600938966%;
+  overflow: hidden;
+  margin-top: 2px;
+}
+#u {
+  background: url("../img/u.svg") 0 9px no-repeat;
+  width: 29px;
+  height: 52px;
+  display: block;
+  float: left;
+  margin-right: 4px;
+  margin-top: 1px;
+}
+#niform {
+  background: url("../img/niform.svg") 0 3px no-repeat;
+  width: 127px;
+  height: 59px;
+  display: block;
+  float: left;
+}
+#strategisk {
+  background: url("../img/strategisk.svg") 0 3px no-repeat;
+  width: 150px;
+  height: 58px;
+  display: block;
+}
+#header1 {
+  float: left;
+  width: 48.82629107981221%;
+  margin: 0 0.5868544600938966%;
+  padding: 15px;
+  margin: 0;
+}
+#header1 p {
+  font-family: Candara, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+  font-size: 31px;
+}
+#para1 {
+  float: left;
+  width: 48.82629107981221%;
+  margin: 0 0.5868544600938966%;
+  padding: 15px;
+  margin: 0;
+  margin-top: 20px;
+  margin-left: 15px;
+  line-height: 140%;
+}
+#para1 a {
+  color: #ef3e6b;
+  text-decoration: none;
+}
+#Article1 {
+  padding: 15px 15px 45px 15px;
+}
+#Article1 h1 {
+  font-family: Candara, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+  color: #555;
+  font-size: 18px;
+  font-weight: lighter;
+}
+#Article1 h1 p {
+  color: #474747;
+  font-size: 22px;
+}
+#Article1 h1 p img {
+  width: 100%;
+  max-width: 1703px;
+  margin-top: 50px;
+}
+#articlepics {
+  overflow: auto;
+  padding: 0;
+  margin-bottom: 15px;
+}
+#articlepics article {
+  display: inline-block;
+  max-width: 534px;
+  vertical-align: top;
+  margin: 15px;
+}
+#articlepics article h1 {
+  margin: 0;
+  padding: 12px 0 11px 0;
+  color: #555;
+  font-size: 17px;
+  font-family: Candara, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+  font-weight: lighter;
+}
+#articlepics article p {
+  margin: 0;
+  padding: 0;
+  color: #474747;
+  font-size: 22px;
+  font-weight: 999;
+}
+#articlepics article img {
+  width: 100%;
+}
+#articlepics article .Ekebergparken {
+  margin-top: 30px;
+}
+#icon {
+  overflow: auto;
+  padding: 0;
+  float: right;
+  margin-right: 30px;
+  margin-top: -30px;
+}
+#icon img {
+  height: 15px;
+  width: 20px;
+}
+footer {
+  width: 100%;
+  bottom: 0;
+  height: 132px;
+  overflow: hidden;
+  background: #fcbb00;
+  color: #474747;
+}
+footer #info {
+  float: left;
+  width: 65.49295774647888%;
+  margin: 0 0.5868544600938966%;
+}
+footer #info p {
+  padding: 25px 30px 0 100px;
+  float: left;
+  font-size: 14px;
+  line-height: 180%;
+}
+footer #info p .name {
+  font-size: 20px;
+}
+footer #info p .name a {
+  text-decoration: none;
+  color: #474747;
+}
+#social {
+  list-style: none;
+  float: right;
+  margin-right: 120px;
+  margin-top: 45px;
+}
+#social li {
+  display: inline;
+  margin-left: 20px;
+}
+#social li img {
+  height: 25px;
+  width: 25px;
+}
