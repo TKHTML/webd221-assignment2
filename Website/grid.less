@@ -1,0 +1,298 @@
+
+
+/*// 1200px grid width*/
+@column-width: 67;
+@gutter-width: 36;
+@columns: 12;
+
+/*// Utility variable — you should never need to modify this*/
+@gridsystem-width: (@column-width * @columns) + (@gutter-width * @columns) * 1px;
+
+/*// Set @total-width to 100% for a fluid layout*/
+/*// @total-width: @gridsystem-width;*/
+@total-width: 100%; /*//makes .column mixin turn into percentages*/
+
+.column(@x,@columns:@columns) {
+	display: inline;
+	float: left;
+	width: @total-width*((((@gutter-width+@column-width)*@x)-@gutter-width) / @gridsystem-width);
+	margin: 0 @total-width*((@gutter-width*.5)/@gridsystem-width);
+}
+
+
+/*// GLOBAL STYLES*/
+/*//----------------------------------------------------------*/
+
+/*// Fixes Box Model sizing issues*/
+/*// http://www.paulirish.com/2012/box-sizing-border-box-ftw/*/
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/*img {
+	width: 100%; //makes all images 100% of it's container
+}*/
+
+/*//Use this to force clear floated child elements*/
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.container {
+	max-width: @gridsystem-width;
+	margin: 0 auto;
+
+}
+
+.column{
+	padding-left: 40px;
+	padding-right: 40px;
+}
+
+/*// SHARED STYLES*/
+/*//------------------------------------*/
+/*.social-links,
+header {
+	background: url(../img/bg-blueyellow.jpg);
+}*/
+
+/*// SOCIAL LINKS*/
+/*//------------------------------------*/
+/*.fa {
+	&:hover {
+		color: red;
+	}
+}*/
+
+
+/*// HEADER: LOGO & NAV*/
+/*//------------------------------------*/
+/*.logo {
+	.column(6);
+}*/
+.responsiveImg {
+	.column(8);
+}
+
+/*.column(8) {
+    display: inline;
+    float: right;
+    width: 620px;
+
+}*/
+	.text{
+	.column(4);
+}
+
+/*.column(4){
+	display: inline;
+	float: left;
+}*/
+
+
+
+/*#img1 {
+	.column(4);
+}*/
+
+.img1 {
+	.column(6);
+    display: inline;
+    float: left;
+    width: 400px ;
+
+}
+	/*#img2{
+	.column(8);
+}
+*/
+.img2{
+	.column(6);
+	display: inline-block;
+	/*float: right;*/
+
+}
+
+#img3{
+	
+	.column(4);
+	
+}
+
+#img4{
+	
+	.column(8);
+	
+}
+
+#sector3 {
+	.column(12);
+
+	#img1{
+		.column(4);
+	}
+	#img2{
+		.column(8);
+	}
+}
+
+#sector4 {
+	.column(12);
+
+	.responsiveImg{
+		.column(10);
+	}
+	
+}
+
+#sector5{
+	/*float: right;*/
+	display: inline-block;
+	.column(12);
+
+	#img1{
+		.column(5)
+	}
+	#img2{
+		.column(7)
+	}
+}
+
+#sector6{
+	.column(12);
+	#img{
+
+	}
+}
+#sector7{
+	.column(12);
+	#img{
+
+	}
+}
+#sector8{
+	.column(12);
+	#img{
+
+	}
+}
+#sector9{
+	.column(12);
+}
+
+
+/*--------Kontackt--------*/
+
+#section1{
+	.column(12);
+		#words{
+			.column(2);
+		}
+
+		.containment{
+			.column(10);
+		}
+	
+}
+
+
+#section2{
+	.column(12);
+	#space{
+		.column(4);
+	}
+	#contact{
+		.column(4);
+	}	
+	#contact2{
+		.column(2);
+	}
+}
+
+#lowerSection{
+	.column(12);
+
+}
+
+footer{
+	.column(12);
+	
+	h2{
+		.column(3)
+	}
+
+	#addresse{
+		.column(3)
+	}
+
+	#kontakt{
+		.column(3)
+	}
+
+	#follows{
+		.column(3)
+	}
+	#center{
+
+		.column(3)
+	}
+}
+/*
+#words{
+	
+	.column(6){
+	display: inline-block;
+	float: left;
+	margin: 0 12px;
+	}
+	
+}
+
+.containment{
+	
+	.column(6){
+		display: inline-block;
+		float: right;
+		margin: 0 12px;
+	}
+	
+}
+
+#contact{
+
+	
+	.column(6){
+		float: right;
+
+	}
+}
+
+#contact2{
+	.column(6){	
+	float: left;
+}
+
+#section1{
+	.column(6)
+}*/
+
+/*// MAIN CONTENT AREA*/
+/*//------------------------------------*/
+/*.main-info {
+	background: url(../img/bg-light.jpg);
+}
+ul.info {
+	margin: 0;
+	padding: 0;
+
+	li {
+		list-style-type: none;
+		.column(4);
+	}
+}*/
+
+
