@@ -1,0 +1,321 @@
+/*// 1200px grid width*/
+/*// Utility variable — you should never need to modify this*/
+/*// Set @total-width to 100% for a fluid layout*/
+/*// @total-width: @gridsystem-width;*/
+/*//makes .column mixin turn into percentages*/
+/*// GLOBAL STYLES*/
+/*//----------------------------------------------------------*/
+/*// Fixes Box Model sizing issues*/
+/*// http://www.paulirish.com/2012/box-sizing-border-box-ftw/*/
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+/*img {
+	width: 100%; //makes all images 100% of it's container
+}*/
+/*//Use this to force clear floated child elements*/
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.container {
+  max-width: 1236px;
+  margin: 0 auto;
+}
+.column {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+/*// SHARED STYLES*/
+/*//------------------------------------*/
+/*.social-links,
+header {
+	background: url(../img/bg-blueyellow.jpg);
+}*/
+/*// SOCIAL LINKS*/
+/*//------------------------------------*/
+/*.fa {
+	&:hover {
+		color: red;
+	}
+}*/
+/*// HEADER: LOGO & NAV*/
+/*//------------------------------------*/
+/*.logo {
+	.column(6);
+}*/
+.responsiveImg {
+  display: inline;
+  float: left;
+  width: 63.75404530744336%;
+  margin: 0 1.4563106796116505%;
+}
+/*.column(8) {
+    display: inline;
+    float: right;
+    width: 620px;
+
+}*/
+.text {
+  display: inline;
+  float: left;
+  width: 30.42071197411003%;
+  margin: 0 1.4563106796116505%;
+}
+/*.column(4){
+	display: inline;
+	float: left;
+}*/
+/*#img1 {
+	.column(4);
+}*/
+.img1 {
+  width: 47.0873786407767%;
+  margin: 0 1.4563106796116505%;
+  display: inline;
+  float: left;
+  width: 400px ;
+}
+/*#img2{
+	.column(8);
+}
+*/
+.img2 {
+  display: inline;
+  float: left;
+  width: 47.0873786407767%;
+  margin: 0 1.4563106796116505%;
+  display: inline-block;
+  /*float: right;*/
+
+}
+#img3 {
+  display: inline;
+  float: left;
+  width: 30.42071197411003%;
+  margin: 0 1.4563106796116505%;
+}
+#img4 {
+  display: inline;
+  float: left;
+  width: 63.75404530744336%;
+  margin: 0 1.4563106796116505%;
+}
+#sector3 {
+  display: inline;
+  float: left;
+  width: 97.0873786407767%;
+  margin: 0 1.4563106796116505%;
+}
+#sector3 #img1 {
+  display: inline;
+  float: left;
+  width: 30.42071197411003%;
+  margin: 0 1.4563106796116505%;
+}
+#sector3 #img2 {
+  display: inline;
+  float: left;
+  width: 63.75404530744336%;
+  margin: 0 1.4563106796116505%;
+}
+#sector4 {
+  display: inline;
+  float: left;
+  width: 97.0873786407767%;
+  margin: 0 1.4563106796116505%;
+}
+#sector4 .responsiveImg {
+  display: inline;
+  float: left;
+  width: 80.42071197411003%;
+  margin: 0 1.4563106796116505%;
+}
+#sector5 {
+  /*float: right;*/
+
+  display: inline-block;
+  display: inline;
+  float: left;
+  width: 97.0873786407767%;
+  margin: 0 1.4563106796116505%;
+}
+#sector5 #img1 {
+  display: inline;
+  float: left;
+  width: 38.75404530744336%;
+  margin: 0 1.4563106796116505%;
+}
+#sector5 #img2 {
+  display: inline;
+  float: left;
+  width: 55.420711974110034%;
+  margin: 0 1.4563106796116505%;
+}
+#sector6 {
+  display: inline;
+  float: left;
+  width: 97.0873786407767%;
+  margin: 0 1.4563106796116505%;
+}
+#sector7 {
+  display: inline;
+  float: left;
+  width: 97.0873786407767%;
+  margin: 0 1.4563106796116505%;
+}
+#sector8 {
+  display: inline;
+  float: left;
+  width: 97.0873786407767%;
+  margin: 0 1.4563106796116505%;
+}
+#sector9 {
+  display: inline;
+  float: left;
+  width: 97.0873786407767%;
+  margin: 0 1.4563106796116505%;
+}
+/*--------Kontackt--------*/
+#section1 {
+  display: inline;
+  float: left;
+  width: 97.0873786407767%;
+  margin: 0 1.4563106796116505%;
+}
+#section1 #words {
+  display: inline;
+  float: left;
+  width: 13.754045307443366%;
+  margin: 0 1.4563106796116505%;
+}
+#section1 .containment {
+  display: inline;
+  float: left;
+  width: 80.42071197411003%;
+  margin: 0 1.4563106796116505%;
+}
+#section2 {
+  display: inline;
+  float: left;
+  width: 97.0873786407767%;
+  margin: 0 1.4563106796116505%;
+}
+#section2 #space {
+  display: inline;
+  float: left;
+  width: 30.42071197411003%;
+  margin: 0 1.4563106796116505%;
+}
+#section2 #contact {
+  display: inline;
+  float: left;
+  width: 30.42071197411003%;
+  margin: 0 1.4563106796116505%;
+}
+#section2 #contact2 {
+  display: inline;
+  float: left;
+  width: 13.754045307443366%;
+  margin: 0 1.4563106796116505%;
+}
+#lowerSection {
+  display: inline;
+  float: left;
+  width: 97.0873786407767%;
+  margin: 0 1.4563106796116505%;
+}
+footer {
+  display: inline;
+  float: left;
+  width: 97.0873786407767%;
+  margin: 0 1.4563106796116505%;
+}
+footer h2 {
+  display: inline;
+  float: left;
+  width: 22.0873786407767%;
+  margin: 0 1.4563106796116505%;
+}
+footer #addresse {
+  display: inline;
+  float: left;
+  width: 22.0873786407767%;
+  margin: 0 1.4563106796116505%;
+}
+footer #kontakt {
+  display: inline;
+  float: left;
+  width: 22.0873786407767%;
+  margin: 0 1.4563106796116505%;
+}
+footer #follows {
+  display: inline;
+  float: left;
+  width: 22.0873786407767%;
+  margin: 0 1.4563106796116505%;
+}
+footer #center {
+  display: inline;
+  float: left;
+  width: 22.0873786407767%;
+  margin: 0 1.4563106796116505%;
+}
+/*
+#words{
+	
+	.column(6){
+	display: inline-block;
+	float: left;
+	margin: 0 12px;
+	}
+	
+}
+
+.containment{
+	
+	.column(6){
+		display: inline-block;
+		float: right;
+		margin: 0 12px;
+	}
+	
+}
+
+#contact{
+
+	
+	.column(6){
+		float: right;
+
+	}
+}
+
+#contact2{
+	.column(6){	
+	float: left;
+}
+
+#section1{
+	.column(6)
+}*/
+/*// MAIN CONTENT AREA*/
+/*//------------------------------------*/
+/*.main-info {
+	background: url(../img/bg-light.jpg);
+}
+ul.info {
+	margin: 0;
+	padding: 0;
+
+	li {
+		list-style-type: none;
+		.column(4);
+	}
+}*/
